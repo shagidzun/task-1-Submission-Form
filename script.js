@@ -46,6 +46,8 @@ function submitForm() {
     .catch(error => {
         alert(error);
     });
+  } else {
+    alert('Please fill the form');
   }
 }
 
