@@ -14,7 +14,7 @@ function validateEmail(email) {
 function submitForm() {
   const email = document.querySelector('.email').value;
   const password = document.querySelector('.password').value;
-  const emailError = document.querySelector('.emailError');
+  const emailError = document.querySelector('.error-message');
 
   if (!validateEmail(email)) {
       emailError.textContent = 'Please enter a valid email address';
