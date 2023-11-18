@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Document</title>
+</head>
+<body>
+  <div class="form">
+    <h1>Login</h1>
+    <form class="login">
+        <label for="email">Email:</label>
+        <input type="email" class="email" name="email" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" required>
+        <div class="emailError" class="error-message"></div>
+
+        <label for="password">Password:</label>
+        <input type="password" class="password" name="password" required>
+
+        <button type="button">Submit</button>
+    </form>
+  </div>
+</body>
+</html>
