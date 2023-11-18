@@ -24,29 +24,30 @@ function submitForm() {
   }
 
   const data = {
-      email: email,
-      password: password
+    email: email,
+    password: password
   };
 
   const serverUrl = 'https://test.com';
 
-  fetch(`${serverUrl}/auth`, {
+  if (email && password) {
+    fetch(`${serverUrl}/auth`, {
       method: 'POST',
       headers: {
           'Content-Type': 'application/json',
       },
       body: JSON.stringify(data),
-  })
-  .then(response => response.json())
-  .then(data => {
-      alert(data.message);
-      window.location.assign('https://example.com');
-  })
-  .catch(error => {
-      alert(error);
-  });
+    })
+    .then(response => response.json())
+    .then(data => {
+        alert(data.message);
+        window.location.href = 'https://example.com';
+    })
+    .catch(error => {
+        alert(error);
+    });
+  }
 }
-
 
 document.querySelector('.submit')
   .addEventListener('click', submitForm);
